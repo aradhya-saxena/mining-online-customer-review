@@ -1,0 +1,11 @@
+photo 
+picture
+resolution
+video
+zoom
+pixel
+cam
+camera
+lens
+image
+

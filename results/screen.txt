@@ -1,0 +1,11 @@
+screen
+mask
+guard
+shield
+crystal
+matte
+screenguard
+shade
+shelter
+cover
+veil

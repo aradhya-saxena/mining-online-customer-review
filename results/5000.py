@@ -1,0 +1,23 @@
+#feature classification
+
+file=open('sentencestest9.txt')
+line=file.readline()
+f1=open('featureclass12.txt','wb')
+while line!= '':
+	if 'camera' in (line.lower()).split():
+		f1.write("camera: "+str(line)+"\n")
+	if 'phone' in (line.lower()).split():
+		f1.write("phone: "+str(line)+"\n")
+	if 'battery' in (line.lower()).split():
+		f1.write("battery: "+str(line)+"\n")
+	if 'screen' in (line.lower()).split():
+		f1.write("screen: "+str(line)+"\n")
+	if 'price' in (line.lower()).split():
+		f1.write("price: "+str(line)+"\n")
+	if 'wifi' in (line.lower()).split():
+		f1.write("wifi: "+str(line)+"\n")
+	line=file.readline()
+f1.close()
+	
+	
+	

@@ -1,0 +1,64 @@
+#feature classification
+
+file=open('sentences.txt')
+line=file.readline()
+f1=open('featureclass.txt','wb')
+cam=open('camera.txt')
+batt=open('battery.txt')
+scr=open('screen.txt')
+ph=open('phone.txt')
+pr=open('price.txt')
+wif=open('wifi.txt')
+
+camera={}
+battery={}
+screen={}
+phone={}
+price={}
+wifi={}
+
+a=b=c=d=e=f=0
+
+for i in cam.read().split():
+	camera[i]=a
+	a=a+1
+for j in batt.read().split():
+	battery[j]=b
+	b=b+1
+for k in scr.read().split():
+	screen[k]=c
+	c=c+1
+for l in ph.read().split():
+	phone[l]=d
+	d=d+1
+for m in pr.read().split():
+	price[m]=e
+	e=e+1
+for n in wif.read().split():
+	wifi[n]=f
+	f=f+1
+
+while line!= '':
+	for p in camera:
+		if p in (line.lower()).split():
+			f1.write("camera: "+str(line)+"\n")
+	for q in phone:	
+		if q in (line.lower()).split():
+			f1.write("phone: "+str(line)+"\n")
+	for r in battery:	
+		if r in (line.lower()).split():
+			f1.write("battery: "+str(line)+"\n")
+	for s in screen:	
+		if s in (line.lower()).split():
+			f1.write("screen: "+str(line)+"\n")
+	for t in price:	
+		if t in (line.lower()).split():
+			f1.write("price: "+str(line)+"\n")
+	for u in wifi:
+		if u in (line.lower()).split():
+			f1.write("wifi: "+str(line)+"\n")
+	line=file.readline()
+f1.close()
+	
+	
+	
